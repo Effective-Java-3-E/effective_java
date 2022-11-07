@@ -19,15 +19,15 @@
 
 ## equals를 재정의할 때 따라야할 일반 규약
 
-1. 반사성(reflexivity) : null이 아닌 모든 참조 값 x에 대해, x.equals(x)는 true이다.
+1. 반사성(reflexivity) : null이 아닌 모든 참조 값 x에 대해, `x.equals(x)`는 true이다.
 
    ➡️ 객체는 자기 자신과 같아야 한다.
 
-2. 대칭성(symmetry) : null이 아닌 모든 참조 값 x, y에 대해, x.equals(y)가 true이면 y.equals(x)도 true이다.
+2. 대칭성(symmetry) : null이 아닌 모든 참조 값 x, y에 대해, `x.equals(y)가 true이면 y.equals(x)도 true`이다.
 
    ➡️ 두 객체는 서로에 대한 동치 여부에 똑같이 답해야 한다는 뜻
 
-3. 추이성(transitivity) : null이 아닌 모든 참조 값 x, y, z에 대해, x.equals(y)가 true이고, y.equals(z)도 true면, x.equals(z)도 true다.
+3. 추이성(transitivity) : null이 아닌 모든 참조 값 x, y, z에 대해, `x.equals(y)가 true이고, y.equals(z)도 true면, x.equals(z)도 true`다.
 
    ➡️ 첫 번째 객체와 두 번째 객체가 같고, 두 번째 객체와 세 번째 객체가 같다면, 첫 번째 객체와 세 번째 객체도 같아야한다.
 
@@ -37,7 +37,7 @@
    따라서 상속 대신 컴포지션을 사용하라(아이템 18)
    ```
 
-4. 일관성(consistency) : null이 아닌 모든 참조 값 x, y에 대해, x.equals(y)를 반복해서 호출하면 항상 true를 반환하거나 항상 false를 반환한다.
+4. 일관성(consistency) : null이 아닌 모든 참조 값 x, y에 대해, `x.equals(y)를 반복해서 호출하면 항상 true를 반환하거나 항상 false를 반환`한다.
 
    ➡️ 두 객체가 같다면 영원히 같아야 한다
 
